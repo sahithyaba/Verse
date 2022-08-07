@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-form {
+    text-align: center;
+    background-color: aliceblue;
+
+}
+
+.login-nav a {
+    font-weight: bold;
+    font-size: larger;
+}
