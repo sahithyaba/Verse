@@ -1,40 +1,25 @@
-var querystring=require('querystring');
+var bodyparser=require('body-parser');
 var express = require('express');
 const { default: mongoose } = require('mongoose');
 
+
 const app=express()
 
-app.use(express.static('public'))
-
-
-var qs;
+//app.set("view engine", "ejs");
+app.use(bodyparser.urlencoded({
+    extended:true
+}))
 
 app.post("/registration", (req,res)=>{
 
-    var datal= "";
-
-    req.on('data', function (chunk) {
-
-    console.log(chunk); 
-
-    datal += chunk;
-
-    console.log("Data in String format: "+datal);
-});
-
-req.on('end', function () {
-
-    qs=querystring.parse(datal); 
- 
-    console.log(qs);
-
-    var Email_Id=qs['Email Id'];
-    var Username=qs['Username'];
-    var Name=qs['Name'];
-    var DOB=qs['Date of Birth'];
-    var ph_number=qs['Phone Number'];
-    var License_Number=qs['Driving License Number'];
-    var Password=qs['Password'];
+    
+    var Email_Id=req.body.Email_Id;
+    var Username=req.body.Username;
+    var Name=req.body.Name;
+    var DOB=req.body.Date_of_Birth;
+    var ph_number=req.body.Phone_Number;
+    var License_Number=req.body.Driving_License_Number;
+    var Password=req.body.Password;
 
     var data={
         'Username': Username,
@@ -50,14 +35,23 @@ req.on('end', function () {
 
     var db=mongoose.connection;
 
-    db.collection('user').insertOne(data,(err,col) =>{
+    db.collection('user').findOne({'Email_Id': Email_Id}, function(err,col){
         if(err) throw err;
-        else {console.log("inserted successfully");}
-    })
+        if(col) 
+        {
+            console.log('account already exist');
+            //return res.redirect('/registration');
+        }
+        else 
+        {
+            db.collection('user').insertOne(data,(err,col) =>{
+                if(err) throw err;
+                else {console.log("inserted successfully");}
+            })
+            //return res.redirect('/login.html');
+        }
+    });
 
-    return res.redirect('/login.html');
-})
 }).listen(8000);
-
 
 console.log("Server started") ;
