@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.registration-page{
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.registration-background{
+    width: 100%;
+    position:absolute;
+    z-index: -1;
+}
+
+.registration-background>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.registration-navigation-bar{
+    margin-top: 25px;
+    display: flex;
+    width: 100%;
+    height: 10%;
+}
+
+.logo-wrapper {
+    display: flex;
+    height: 5vh;
+    margin-top: 4px;
+    margin-left: 20px;
+}
+
+.logo-wrapper>img{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navigation-link{
+    margin-top: 10px;
+}
+
+.navigation-link > a {
+    margin-top: 20px;
+    padding: 10px 25px;
+    justify-content: space-between;
+    font-size: 20px;
+    opacity: 0.8;
+    text-decoration: none;
+    color: black;
+}
+
+.location-profile-wrapper{
+    display: flex;
+    margin-left: 600px;
+}
+
+.location-search{
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.location-search>input{
+    width: 100px;
+    border: none;
+    background: none;
+}
+
+.location-search>input::placeholder{
+    font-size: 15px;
+}
+
+.login-wrapper{
+    display: flex;
+}
+
+.login-profile-icon{
+    display: inline;
+    margin-left: 10px;
+    margin-top: 13px;
+}
+
+.login-button{
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+.login-button>a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(30, 130, 212);
+}
+
+.registration-form{
+    display: flex;
+    align-items: center;
+    margin-top: 75px;
+    margin-left: 250px;
+    background-color: inherit;
+}
+
+form{
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 40px 80px 80px 80px;
+    text-align: center;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+form>h1{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.input-fields{
+    padding: 3px 3px 3px 3px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-fields>input{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    width: 315px;
+    height: 50px;
+    left: 13px;
+    top: 92px;
+    text-align: center;
+    padding-right: 5px;
+}
+
+
+
+.input-fields>input::placeholder{
+    font-size: 15px;
+    color: rgb(186, 180, 180);
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+}
+
+.input-fields>button{
+    width: 185px;
+    height: 50px;
+    left: 85px;
+    top: 285px;
+    background: #46B1FE;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.have-account~a{
+    text-decoration: none;
+    color: #46B1FE;
+    font-weight: bold;
+}
+
+
+

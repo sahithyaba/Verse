@@ -1,18 +1,18 @@
 var bodyparser=require('body-parser');
 var express = require('express');
 const { default: mongoose } = require('mongoose');
-
+var path = require('path');
 
 const app=express()
 
-//app.set("view engine", "ejs");
+app.set("view engine", "ejs");
 app.use(bodyparser.urlencoded({
     extended:true
 }))
+app.use(express.static(path.join(__dirname, 'views')));
 
 app.post("/registration", (req,res)=>{
 
-    
     var Email_Id=req.body.Email_Id;
     var Username=req.body.Username;
     var Name=req.body.Name;
@@ -40,6 +40,8 @@ app.post("/registration", (req,res)=>{
         if(col) 
         {
             console.log('account already exist');
+            const msg="account already exist please login";
+            res.render('login',{msg})
             //return res.redirect('/registration');
         }
         else 
@@ -47,8 +49,9 @@ app.post("/registration", (req,res)=>{
             db.collection('user').insertOne(data,(err,col) =>{
                 if(err) throw err;
                 else {console.log("inserted successfully");}
+                res.render('index')
+                
             })
-            //return res.redirect('/login.html');
         }
     });
 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <!-- head :: start -->
+    <head>
+        <title>Verse</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/registration.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+        <script src="java script/registration.js"></script>
+    </head>
+    <!-- head :: end -->
+    <!-- body :: start -->
+    <body>
+        <main class="registration-page">
+            <!-- section registration background :: start -->
+            <section class="registration-background">
+                <img src="./resources/login-background.jpg"/>
+            </section>
+            <!-- section registration background :: end -->
+            <!-- nav :: start -->
+            <nav class="registration-navigation-bar">
+                <div class="logo-wrapper">                    
+                    <img src="./resources/verse-removebg.png">
+                </div>
+                <div class="navigation-link">   
+                <a href="#">Search</a>
+                <a href="#">Offer</a>
+                <a href="#">About Us</a>
+                <a href="#">Reach Us</a>     
+                </div>    
+                <div class="location-profile-wrapper">       
+                    <div class="location-search">
+                        <input type="text" placeholder="Location"/>
+                    </div>
+                    <div class="login-wrapper">
+                        <div class="login-profile-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="login-button">
+                            <a href="javasrcipt:void(0);">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- nav :: end -->
+            <!-- section registration form :: start -->
+            <section class="registration-form">
+                <form name="Register" action="http://localhost:8000/registration" onsubmit="return validateForm()"  method="post">
+                    <h1 class="registration-heading">Register</h1>
+                    <div class="input-fields">
+                        <input type="text" name="Name" placeholder="Name"/>
+                    </div>
+                    <div class="input-fields">
+                        <input type="text" name="Email_Id" placeholder="Email Id"/>
+                    </div>
+                    <div class="input-fields">
+                        <input type="text" name="Username" placeholder="Username"/>
+                    </div>
+                    <div class="input-fields">
+                        <input type="date" name="Date_of_Birth" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}"/>
+                    </div>
+                    <div class="input-fields">
+                        <input type="tect" name="Phone_Number" placeholder="Phone Number"/>
+                    </div>
+                    <div class="input-fields">
+                        <input type="number" name="Driving_License_Number" placeholder="Driving License Number"/>
+                    </div>
+                    <div class="input-fields">
+                        <input type="password" name="Password" placeholder="Password"/>
+                    </div>
+                    <div class="input-fields">
+                        <input type="password" name="Confirm Password" placeholder="Confirm Password"/>
+                    </div>
+                    <div class="input-fields">
+                        <button class="login-button" type="submit">Register</button>
+                    </div>
+                    <span class="have-account">Have Account?</span>
+                    <a href="" id="clickMe">Login</a>
+                </form>
+            </section>
+            <!-- section registration form :: end -->
+        </main>
+    </body>
+    <!-- body :: end -->
+</html>

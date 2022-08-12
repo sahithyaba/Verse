@@ -1,16 +1,17 @@
 var express = require('express');
 var bodyparser=require('body-parser');
 const { default: mongoose } = require('mongoose');
+var path = require('path');
 
 const app=express()
 
+app.set("view engine", "ejs");
 app.use(express.static('public'))
 app.use(bodyparser.urlencoded({
     extended:true
 }))
+app.use(express.static(path.join(__dirname, 'views')));
 
-
-var qs;
 
 app.post("/Login", (req,res)=>{
 
@@ -24,8 +25,16 @@ app.post("/Login", (req,res)=>{
 
         db.collection('user').findOne({$and:[{$or:[{"Email_Id":Email_Id},{"Username":Email_Id}]},{'Password':Password}]}, (err,res) => {
         if(err) throw err;
-        if(res) console.log("user found");
-        else console.log('user not found');
+        if(res) {
+            console.log("user found");
+            res.render('index')
+        }
+        else 
+        {
+            const msg="incorrect username or password";
+            console.log('user not found');
+            res.render('login',{msg})
+        }
     });
 
       
