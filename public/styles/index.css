@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    height: 80hv;
+}
+
+.home-background {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.home-background>img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    height: 10%;
+    margin-top: 10px;
+}
+
+.logo-wrapper {
+    display: flex;
+    height: 5vh;
+    width: 10%;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+.nav-bar {
+    margin-top: 10px;
+    display: flex;
+}
+
+.nav-link>a {
+    text-decoration: none;
+    padding: 10px 25px;
+    display: inline-flex;
+    color: white;
+    font-size: 20px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.location-home-wrapper {
+    margin-left: 450px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.location-home-search {
+    margin-top: 10px;
+}
+
+.location-home-search>input {
+    background: none;
+    border: none;
+    width: 100px;
+    color: white;
+}
+
+.location-home-search>input::placeholder {
+    color: white;
+    font-size: 15px;
+}
+
+.home-wrapper {
+    display: flex;
+}
+
+.home-profile-icon {
+    margin-top: 10px;
+    display: inline-flex;
+    color: white;
+}
+
+.login-button {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.login-button>a {
+    color: rgb(87, 152, 206);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.home-content {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    margin-top: 150px;
+    margin-left: 700px;
+    width: 550px;
+    padding: 70px;
+    line-height: 1.5;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+
+}
+
+.reach-us {
+    display: flex;
+    flex-direction: column;
+    height: 80hv;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.background>img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 25px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.input-area {
+    margin-top: 35px;
+    display: inline-flex;
+}
+
+.input-fields {
+    display: flex;
+}
+
+.input-fields>input {
+    text-align: center;
+    border-radius: 5px;
+    width: 350px;
+    height: 80px;
+    margin-left: 30px;
+    border-color: black;
+    border-width: 1px;
+}
+
+.input-fields>input::placeholder {
+    font-size: 20px;
+}
+
+.input-fields>textarea {
+    margin-top: 35px;
+    margin-left: 300px;
+    text-align: center;
+    border-radius: 5px;
+    width: 800px;
+    height: 200px;
+    line-height: 9;
+    border-color: black;
+    border-width: 1px;
+    font-size: 20px;
+}
+
+.submit-button>button {
+    background-color: rgb(102, 197, 252);
+    text-align: center;
+    margin-top: 30px;
+    height: 50px;
+    width: 200px;
+    border-radius: 500px;
+    color: black;
+    font-weight: bold;
+    font-family: sahitya;
+    font-size: larger;
+}
+
+.index-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    height: 100%;
+    padding: 30px 80px 50px 80px;
+    margin-bottom: 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.footer-contact {
+    display: inline;
+    width: 30%;
+}
+
+.footer-contact>h2 {
+    margin-bottom: 25px;
+}
+
+.contact-help-line {
+    display: flex;
+}
+
+.contact-mail {
+    display: flex;
+}
+
+.contact-mail>h4 {
+    padding-right: 10px;
+}
+
+.footer-policies {
+    display: inline;
+    width: 30%;
+}
+
+.footer-policies>h2 {
+    margin-bottom: 25px;
+}
+
+.policies-link {
+    padding-bottom: 5px;
+}
+
+.policies-link>a {
+    text-decoration: none;
+    color: aliceblue;
+    opacity: 0.7;
+}
+
+.footer-social {
+    display: inline;
+    width: 40%;
+}
+
+.footer-social>h2 {
+    margin-bottom: 25px;
+}
+
+.social-content>p {
+    opacity: 0.9;
+    margin-bottom: 25px;
+
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links>a {
+    margin-left: 70px;
+    size: 90px;
+}
+
+.fa-brands {
+    font-size: 30px;
+    color: white;
+}
+
+.footer-copyright {
+    color: white;
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    text-transform: capitalize;
+}
