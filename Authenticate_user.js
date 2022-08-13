@@ -23,9 +23,9 @@ app.post("/Login", (req,res)=>{
 
     var db=mongoose.connection;
 
-        db.collection('user').findOne({$and:[{$or:[{"Email_Id":Email_Id},{"Username":Email_Id}]},{'Password':Password}]}, (err,res) => {
+        db.collection('user').findOne({$and:[{$or:[{"Email_Id":Email_Id},{"Username":Email_Id}]},{'Password':Password}]}, (err,user) => {
         if(err) throw err;
-        if(res) {
+        if(user) {
             console.log("user found");
             res.render('index')
         }

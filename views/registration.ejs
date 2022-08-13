@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="./styles/registration.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-        <script src="java script/registration.js"></script>
+
+        <!-- Form Validation Link -->
+        <script src="java script/validation.js"></script>
+
     </head>
     <!-- head :: end -->
     <!-- body :: start -->
@@ -45,7 +48,7 @@
             <!-- nav :: end -->
             <!-- section registration form :: start -->
             <section class="registration-form">
-                <form name="Register" action="http://localhost:8000/registration" onsubmit="return validateForm()"  method="post">
+                <form name="Register" action="http://localhost:8000/registration" onsubmit="return validateRegister()"  method="post">
                     <h1 class="registration-heading">Register</h1>
                     <div class="input-fields">
                         <input type="text" name="Name" placeholder="Name"/>

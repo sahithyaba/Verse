@@ -39,8 +39,8 @@ app.post("/registration", (req,res)=>{
         if(err) throw err;
         if(col) 
         {
-            console.log('account already exist');
-            const msg="account already exist please login";
+            console.log('Account already exist');
+            const msg="Account already exist Please Login";
             res.render('login',{msg})
             //return res.redirect('/registration');
         }

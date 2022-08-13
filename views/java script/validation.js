@@ -1,4 +1,4 @@
-function validateForm() {
+function validateRegister() {
     // Name Validation
     let x = document.forms["Register"]["Name"].value;
     if (x == "") {
@@ -16,4 +16,9 @@ function validateForm() {
     }
 
     x = document.forms["Register"]["Email id"].value;
+  }
+
+  function validateLogin()
+  {
+    
   }
